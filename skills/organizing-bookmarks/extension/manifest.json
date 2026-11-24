@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Bridge",
+  "version": "0.0.1",
+  "description": "Local bridge for organizing-bookmarks skill: receives add-bookmark jobs from 127.0.0.1:8765",
+  "permissions": [
+    "bookmarks",
+    "alarms",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Bookmark Bridge (polling)",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

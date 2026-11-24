@@ -1,0 +1,32 @@
+{
+  "_comment": "organizing-bookmarks clean 命令的规则示例。复制后按需修改。",
+  "_usage": "python3 scripts/bm.py clean --src chrome --rules clean-rules.json --dry-run",
+
+  "protected": ["固定导航"],
+
+  "strip_invisible": true,
+
+  "strip_suffixes": [
+    " - 知乎",
+    " | 博客园",
+    " - 简书",
+    " - 少数派",
+    "_哔哩哔哩_bilibili"
+  ],
+
+  "max_length": 50,
+
+  "env": {
+    "_comment": "仅当 URL 的 host 中明确带环境词时才标注, 避免误伤文档标题",
+    "suffix": "-{label}",
+    "map": {
+      "test": "测试",
+      "dev": "开发",
+      "uat": "预发",
+      "sit": "预发",
+      "stg": "预发",
+      "staging": "预发",
+      "prod": "生产"
+    }
+  }
+}

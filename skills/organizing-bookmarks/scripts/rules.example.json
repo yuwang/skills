@@ -1,0 +1,281 @@
+{
+  "_comment": "organizing-bookmarks 规则文件通用示例。复制后按自己的分类习惯修改。",
+  "_usage": "python3 scripts/bm.py organize --src chrome --rules rules.json --dry-run --export preview.html",
+  "protected": [
+    "固定导航"
+  ],
+  "_match_priority": "按 categories 顺序匹配, 第一条命中的生效; 都没命中则保持原位, 可用 apply 补丁事后处理",
+  "categories": [
+    {
+      "_comment": "占位示例: 按业务系统分类时, 用你自己的系统名替换 xx",
+      "path": [
+        "xx系统",
+        "xx模块"
+      ],
+      "domains": [
+        "internal.example.com"
+      ],
+      "keywords": [
+        "xx功能"
+      ]
+    },
+    {
+      "path": [
+        "开发",
+        "编程语言"
+      ],
+      "keywords": [
+        "java",
+        "python",
+        "javascript",
+        "typescript",
+        "golang",
+        "rust",
+        "c++"
+      ]
+    },
+    {
+      "path": [
+        "开发",
+        "数据库"
+      ],
+      "keywords": [
+        "mysql",
+        "postgres",
+        "redis",
+        "mongodb",
+        "sqlite",
+        "database"
+      ]
+    },
+    {
+      "path": [
+        "开发",
+        "框架与中间件"
+      ],
+      "keywords": [
+        "spring",
+        "react",
+        "vue",
+        "django",
+        "flask",
+        "kafka",
+        "rabbitmq",
+        "nginx"
+      ]
+    },
+    {
+      "path": [
+        "开发",
+        "云与部署"
+      ],
+      "domains": [
+        "console.aws.amazon.com",
+        "console.cloud.google.com",
+        "portal.azure.com"
+      ],
+      "keywords": [
+        "docker",
+        "kubernetes",
+        "k8s",
+        "deploy",
+        "ci/cd"
+      ]
+    },
+    {
+      "path": [
+        "开发",
+        "代码托管"
+      ],
+      "domains": [
+        "github.com",
+        "gitlab.com",
+        "gitee.com"
+      ],
+      "keywords": [
+        "git",
+        "repository"
+      ]
+    },
+    {
+      "path": [
+        "学习",
+        "课程与教程"
+      ],
+      "domains": [
+        "coursera.org",
+        "udemy.com",
+        "edx.org",
+        "khanacademy.org"
+      ],
+      "keywords": [
+        "教程",
+        "课程",
+        "tutorial",
+        "course"
+      ]
+    },
+    {
+      "path": [
+        "学习",
+        "技术博客"
+      ],
+      "domains": [
+        "medium.com",
+        "dev.to",
+        "cnblogs.com",
+        "juejin.cn",
+        "hashnode.com"
+      ],
+      "keywords": [
+        "博客",
+        "blog",
+        "文章"
+      ]
+    },
+    {
+      "path": [
+        "学习",
+        "问答与文档"
+      ],
+      "domains": [
+        "stackoverflow.com",
+        "developer.mozilla.org",
+        "docs.python.org"
+      ],
+      "keywords": [
+        "documentation",
+        "文档",
+        "问答",
+        "reference"
+      ]
+    },
+    {
+      "path": [
+        "AI",
+        "对话助手"
+      ],
+      "domains": [
+        "chat.openai.com",
+        "claude.ai",
+        "gemini.google.com",
+        "chat.deepseek.com"
+      ],
+      "keywords": [
+        "ai",
+        "chat",
+        "对话",
+        "助手"
+      ]
+    },
+    {
+      "path": [
+        "AI",
+        "开发框架"
+      ],
+      "keywords": [
+        "langchain",
+        "llamaindex",
+        "transformers",
+        "prompt",
+        "embedding",
+        "rag"
+      ]
+    },
+    {
+      "path": [
+        "工具",
+        "在线工具"
+      ],
+      "keywords": [
+        "json",
+        "转换",
+        "编码",
+        "解码",
+        "正则",
+        "timestamp",
+        "formatter",
+        "converter"
+      ]
+    },
+    {
+      "path": [
+        "工具",
+        "邮箱"
+      ],
+      "domains": [
+        "mail.google.com",
+        "outlook.com",
+        "mail.qq.com",
+        "mail.163.com"
+      ]
+    },
+    {
+      "path": [
+        "工具",
+        "设计资源"
+      ],
+      "domains": [
+        "figma.com",
+        "dribbble.com",
+        "behance.net",
+        "iconfont.cn"
+      ],
+      "keywords": [
+        "design",
+        "图标",
+        "设计",
+        "素材"
+      ]
+    },
+    {
+      "path": [
+        "生活",
+        "购物"
+      ],
+      "domains": [
+        "amazon.com",
+        "taobao.com",
+        "jd.com",
+        "ebay.com"
+      ],
+      "keywords": [
+        "购物",
+        "shop",
+        "商店"
+      ]
+    },
+    {
+      "path": [
+        "生活",
+        "影音娱乐"
+      ],
+      "domains": [
+        "youtube.com",
+        "bilibili.com",
+        "netflix.com",
+        "spotify.com"
+      ],
+      "keywords": [
+        "视频",
+        "音乐",
+        "movie",
+        "video",
+        "music"
+      ]
+    }
+  ],
+  "environment": {
+    "_comment": "可选: 识别 host 中的环境词并加后缀。",
+    "suffix": "-{label}",
+    "map": {
+      "test": "测试",
+      "dev": "开发",
+      "uat": "预发",
+      "stg": "预发",
+      "staging": "预发",
+      "pre": "预发",
+      "prod": "生产"
+    }
+  }
+}
